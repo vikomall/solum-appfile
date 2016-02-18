@@ -1,0 +1,18 @@
+version: <app-file-version>
+name: <app-name>
+description: <app-description>
+languagepack: <languagepack-name>
+source:
+  repository: <github-repo-url>
+  revision: <repo-branch OR commit-sha>
+  private: <True OR False>
+  repo_token: <github-private-repo-token>
+workflow_config:
+  test_cmd: <command-to-run-tests>
+  run_cmd: <command-to-run-app>
+trigger_actions:
+ - test
+ - build
+ - deploy
+ports:
+ - 80
